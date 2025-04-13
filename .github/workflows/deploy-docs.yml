@@ -20,13 +20,20 @@ jobs:
           cache-dependency-path: ./documentation/package-lock.json
           node-version: 18
           cache: yarn
+      - name: ls1 
+        run: ls ./        
       - name: cd into directory
         run: cd ./documentation
+      - name: ls2
+        run: ls ./            
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: ls3
+        run: ls ./              
       - name: Build website
         run: yarn build
-
+      - name: ls4
+        run: ls ./      
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
