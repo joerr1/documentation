@@ -1,6 +1,6 @@
 {
   "label": "Sans connection internet",
-  "position": 2,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Comment connecter le victron au BMS en etant pas connecte a internet"
