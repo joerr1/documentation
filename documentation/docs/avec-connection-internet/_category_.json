@@ -1,0 +1,8 @@
+{
+  "label": "Avec connection internet",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Comment connecter le victron au BMS en etant connecte a internet"
+  }
+}

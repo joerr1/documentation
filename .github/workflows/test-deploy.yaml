@@ -11,19 +11,18 @@ jobs:
   test-deploy:
     name: Test deployment
     runs-on: ubuntu-latest
-    defaults:
-       run:
-         working-directory: ./documentation/
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
+          cache-dependency-path: ./documentation/package-lock.json
           node-version: 18
           cache: yarn
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Test build website
-        run: yarn build
+      - name: build website 
+        run: |
+          cd ./documentation
+          yarn install --frozen-lockfile
+          yarn build
